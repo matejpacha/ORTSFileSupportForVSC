@@ -40,8 +40,8 @@
 - `examples/sample.eng` - Locomotive definition example
 - `examples/sample.cvf` - Cabview layout example
 - `examples/sample.sms` - Sound system example
-- `sample.inc` - Include file example
-- `sample.wag` - Wagon definition example
+- `examples/sample.inc` - Include file example
+- `examples/sample.wag` - Wagon definition example
 
 ## 🎉 Latest Changes (v1.5.1)
 - **Skip Enhancement**: `skip` statements now display as comments

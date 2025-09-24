@@ -31,7 +31,7 @@ Create a distribution package with:
 - `eng-language-support-1.0.0.vsix` (the extension)
 - `INSTALL.md` (installation instructions)
 - `README.md` (feature overview)
-- `sample.eng` (test file)
+- `examples/sample.eng` (test file)
 
 ## 🔄 Auto-Update Strategy
 

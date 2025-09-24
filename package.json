@@ -2,17 +2,17 @@
   "name": "eng-language-support",
   "displayName": "ENG Language Support",
   "description": "Language support for ENG, INC, WAG, CVF, and SMS (Microsoft Train Simulator / OpenRails) files with syntax highlighting and language configuration",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "publisher": "your-publisher-name",
   "author": "Your Name",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/eng-language-support.git"
+    "url": "https://github.com/matejpacha/ORTSFileSupportForVSC.git"
   },
-  "homepage": "https://github.com/your-username/eng-language-support#readme",
+  "homepage": "https://github.com/matejpacha/ORTSFileSupportForVSC#readme",
   "bugs": {
-    "url": "https://github.com/your-username/eng-language-support/issues"
+    "url": "https://github.com/matejpacha/ORTSFileSupportForVSC/issues"
   },
   "keywords": [
     "eng",

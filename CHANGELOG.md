@@ -2,6 +2,20 @@
 
 All notable changes to the ENG Language Support extension will be documented in this file.
 
+## [1.5.2] - 2025-09-24
+
+### Changed
+- **File organization** - Moved all sample and test files to `examples/` folder for better project structure
+- **Documentation updates** - Updated all documentation files with correct version numbers (1.5.1 → 1.5.2)
+- **Sample file references** - Fixed all documentation to reference files in `examples/` folder
+- **Installation scripts** - Updated `install-extension.bat` to reference correct VSIX version
+- **Publishing guide** - Enhanced `publishing-commands.txt` with comprehensive workflow and current project information
+
+### Organized Files
+- Moved sample files: `sample.eng`, `sample.inc`, `sample.wag` → `examples/`
+- Moved test files: `test-comments.eng`, `test-file-paths.eng`, `test-new-sections.eng`, `test-special-comments.eng` → `examples/`
+- All example and test files are now consolidated in the `examples/` directory
+
 ## [1.5.1] - 2025-09-24
 
 ### Changed

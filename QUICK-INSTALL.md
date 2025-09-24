@@ -42,8 +42,8 @@ After installation, test with these sample files (included):
 - `examples/sample.eng` - Locomotive definition
 - `examples/sample.cvf` - Cabview layout  
 - `examples/sample.sms` - Sound system
-- `sample.inc` - Include file
-- `sample.wag` - Wagon definition
+- `examples/sample.inc` - Include file
+- `examples/sample.wag` - Wagon definition
 
 ## 🛠️ File Path Navigation
 

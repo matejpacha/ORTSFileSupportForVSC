@@ -1,18 +1,76 @@
-# Publishing Commands
+# Publishing Commands for ENG Language Support Extension
 
-## Login to publisher account
+## Current Version: 1.5.1
+
+## Prerequisites
+# Install vsce globally (if not already installed)
+npm install -g vsce
+
+## 1. Prepare for Publishing
+
+### Compile TypeScript
+npm run compile
+
+### Create Package (.vsix file)
+vsce package
+
+### Test Package Locally
+code --install-extension eng-language-support-1.5.1.vsix
+
+## 2. Publishing to VS Code Marketplace
+
+### Login to publisher account (first time only)
 vsce login your-publisher-name
 
-## Publish to marketplace
+### Publish current version
 vsce publish
 
-## Or publish with specific version
-vsce publish 1.0.0
+### Publish with specific version
+vsce publish 1.5.2
 
-## Or publish pre-release
+### Publish pre-release version
 vsce publish --pre-release
 
-## Update version and publish
-vsce publish patch  # 1.0.0 -> 1.0.1
-vsce publish minor  # 1.0.0 -> 1.1.0  
-vsce publish major  # 1.0.0 -> 2.0.0
+## 3. Version Management
+
+### Update version and publish automatically
+vsce publish patch  # 1.5.1 -> 1.5.2
+vsce publish minor  # 1.5.1 -> 1.6.0  
+vsce publish major  # 1.5.1 -> 2.0.0
+
+### Manual version update (in package.json)
+# Edit package.json version field, then:
+vsce publish
+
+## 4. Alternative Distribution
+
+### Create standalone package for manual distribution
+vsce package
+
+### Install from package file
+code --install-extension eng-language-support-1.5.1.vsix
+
+## 5. Verification Commands
+
+### Check extension info
+vsce show your-publisher-name.eng-language-support
+
+### List published versions
+vsce ls your-publisher-name
+
+### Check package contents before publishing
+vsce ls
+
+## 6. Important Notes
+
+# - Update CHANGELOG.md before each release
+# - Test extension thoroughly before publishing
+# - Ensure all sample files are in examples/ folder
+# - Verify documentation is up-to-date
+# - Check that version numbers match across all files
+
+## 7. Current Package Information
+# Package: eng-language-support-1.5.1.vsix  
+# Size: ~172 KB
+# Files: 25 files including examples, documentation, and compiled code
+# Supported Extensions: .eng, .inc, .wag, .cvf, .sms

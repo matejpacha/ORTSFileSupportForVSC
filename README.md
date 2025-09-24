@@ -106,7 +106,7 @@ npm run watch
 - `src/extension.ts` - Extension entry point
 - `language-configuration.json` - Language configuration
 - `syntaxes/eng.tmLanguage.json` - TextMate grammar for syntax highlighting
-- `sample.eng` - Example ENG file for testing
+- `examples/sample.eng` - Example ENG file for testing
 
 ## ENG and INC File Formats
 
