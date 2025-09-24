@@ -5,8 +5,8 @@ echo  Installation Script
 echo ================================
 echo.
 
-if not exist "eng-language-support-1.5.1.vsix" (
-    echo ERROR: eng-language-support-1.5.1.vsix not found!
+if not exist "eng-language-support-1.5.2.vsix" (
+    echo ERROR: eng-language-support-1.5.2.vsix not found!
     echo Please make sure the .vsix file is in the same folder as this script.
     pause
     exit /b 1
