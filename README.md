@@ -1,4 +1,4 @@
-# ENG Language Support
+# MSTS/OpenRails ENG/WAG script Language Support
 
 A Visual Studio Code extension that provides comprehensive language support for ENG, INC, WAG, and CVF files used in Microsoft Train Simulator and OpenRails.
 
