@@ -1,0 +1,56 @@
+comment(
+This is a sample ENG file for Microsoft Train Simulator / OpenRails
+Demonstrating syntax highlighting for locomotive/rolling stock definitions
+)
+
+Wagon (
+	Type ( Freight )
+	Name ( "Sample Freight Car" )
+	Description ( "A sample freight car for testing syntax highlighting" )
+	
+	comment( Physical properties )
+	Mass ( 25t )
+	Length ( 12.5m )
+	Width ( 3.2m )
+	Height ( 4.1m )
+	
+	comment( Center of gravity and inertia )
+	CentreOfGravity ( 0m 1.8m 0m )
+	InertiaTensor ( Box ( 2.5m 1.8m 12.5m ) )
+	
+	comment( Coupling and brake settings )
+	Coupling (
+		Type ( Automatic )
+		Spring (
+			Stiffness ( 1e6N/m 2e6N/m )
+			Damping ( 1e6N/m/s 1e6N/m/s )
+			Break ( 1.2e6N 1.2e6N )
+			r0 ( 20cm 40cm )
+		)
+	)
+	
+	comment( Brake system )
+	BrakePipeVolume ( 0.5 )
+	MaxBrakeForce ( 89kN )
+	MaxHandbrakeForce ( 15kN )
+	NumberOfHandbrakeLeverSteps ( 8 )
+	MaxReleaseRate ( 2 )
+	MaxApplicationRate ( 2 )
+	
+	comment( Visual and sound effects )
+	Sound ( "..\\..\\common.sound\\EMD_567\\567eng.sms" )
+	Name3D ( "sample_car.s" )
+	
+	comment( Include common locomotive definitions )
+	include ( "common\\locomotive_base.inc" )
+	
+	comment( Animation frames )
+	FreightAnim (
+		WagonShape ( "sample_car.s" )
+		FreightShape ( "load_coal.s" )
+		MaxHeight ( 1.0 )
+		MinHeight ( 0.0 )
+		FreightWeight ( 40t )
+		StaticFlags ( 00000001 )
+	)
+)

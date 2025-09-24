@@ -1,0 +1,18 @@
+comment(
+This is a lowercase comment block
+)
+
+Comment(
+This is a capitalized Comment block
+)
+
+Wagon (
+	Type ( Freight )
+	Name ( "Test Wagon" )
+	
+	comment( Another lowercase comment )
+	
+	Comment( Another capitalized Comment )
+	
+	Mass ( 25t )
+)

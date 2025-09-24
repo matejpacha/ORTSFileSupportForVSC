@@ -1,0 +1,72 @@
+comment(
+Sample WAG file - Freight Car Definition
+This demonstrates syntax highlighting for wagon files
+)
+
+Wagon (
+	Type ( Freight )
+	Name ( "40ft Box Car" )
+	Description ( "Standard 40-foot boxcar for general freight service" )
+	
+	comment (** Physical dimensions and mass properties **)
+	Mass ( 28t )
+	Length ( 12.2m )
+	Width ( 3.05m )
+	Height ( 4.11m )
+	
+	comment( Center of gravity - important for stability )
+	CentreOfGravity ( 0m 1.8m 0m )
+	InertiaTensor ( Box ( 1.5m 1.8m 12.2m ) )
+	
+	comment( Coupling system )
+	Coupling (
+		Type ( Automatic )
+		Spring (
+			Stiffness ( 1e6N/m 2e6N/m )
+			Damping ( 1e6N/m/s 1e6N/m/s )
+			Break ( 1.2e6N 1.2e6N )
+			r0 ( 20cm 40cm )
+		)
+	)
+	
+	comment (** Brake system configuration **)
+	BrakePipeVolume ( 0.4 )
+	MainResPipeVolume ( 0.8 )
+	MaxBrakeForce ( 89kN )
+	MaxHandbrakeForce ( 15kN )
+	NumberOfHandbrakeLeverSteps ( 8 )
+	MaxReleaseRate ( 2.5 )
+	MaxApplicationRate ( 2.5 )
+	
+	comment( Brake shoe friction characteristics )
+	ORTSBrakeShoeFriction (
+		BrakeShoeFrictionEntry ( 0.0 0.40 )
+		BrakeShoeFrictionEntry ( 10.0 0.37 )
+		BrakeShoeFrictionEntry ( 30.0 0.32 )
+		BrakeShoeFrictionEntry ( 60.0 0.28 )
+	)
+	
+	comment( Visual model and animations )
+	WagonShape ( "40ft_boxcar.s" )
+	FreightAnim (
+		WagonShape ( "40ft_boxcar.s" )
+		FreightShape ( "boxcar_load.s" )
+		MaxHeight ( 1.2 )
+		MinHeight ( 0.0 )
+		FreightWeight ( 25t )
+		StaticFlags ( 00000001 )
+	)
+	
+	comment (** Sound configuration for realistic audio **)
+	Sound ( "..\\..\\common.sound\\freight\\boxcar.sms" )
+	
+	comment( Additional wagon-specific parameters )
+	Name3D ( "40ft_boxcar.s" )
+	CabViewFile ( "..\\..\\common.cab\\freight_cab.cvf" )
+	
+	Description (
+		"Standard 40-foot boxcar used for general freight service"
+		"Suitable for manufactured goods, boxed cargo, and palletized freight"
+		"Authentic AAR truck design with modern air brake system"
+	)
+)

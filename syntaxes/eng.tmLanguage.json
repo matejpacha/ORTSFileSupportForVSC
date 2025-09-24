@@ -1,0 +1,150 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ENG File",
+  "scopeName": "source.eng",
+  "patterns": [
+    {
+      "include": "#foldable-blocks"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#sections"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#parameters"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "foldable-blocks": {
+      "patterns": [
+        {
+          "name": "meta.block.eng",
+          "begin": "\\b(Engine|Wagon|CabView|Sound|Lights|Effects|Controls|Physics|Performance|Brakes|TractionCutOffRelay|Pantographs|PowerSupply|CircuitBreaker|EmergencyBrakes|TrainBrakeController|EngineBrakeController|DynamicBrake|GearBox|Diesel|Electric|Steam|Tender|HeadOut|CabView3D|FreightAnim|Headlight|Pantograph|Coupling|Spring|Animation|FreightShape|ORTSDieselEngines|DieselPowerTab|DieselConsumptionTab|ThrottleRPMTab|DieselTorqueTab|ORTSBrakeShoeFriction|EngineControllers|Throttle|NumNotches|Brake_Engine|Brake_Train|Description|EngineOperatingProcedures|Tr_CabViewFile|CabViewControls|Digital|MultiStateDisplay|CabSignalDisplay|TwoState|TriState|Lever|Dial|DigitalClock|States|State|ScalabiltyGroup|Activation|Deactivation|Stream|Streams|Tr_SMS|Group|Trigger|Volume|SoundLoop|SelectionMethod|Clips|SpeedControlled|CurvePoints|FrequencyCurve|VolumeCurve|Discrete|RandomDelay|InitialDelay)\\s*\\(",
+          "end": "\\)",
+          "beginCaptures": {
+            "1": {"name": "entity.name.section.eng"}
+          },
+          "patterns": [
+            {"include": "#foldable-blocks"},
+            {"include": "#comments"},
+            {"include": "#keywords"},
+            {"include": "#strings"},
+            {"include": "#numbers"},
+            {"include": "#parameters"},
+            {"include": "#operators"}
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.special.eng",
+          "begin": "(?i)\\bcomment\\s*\\(\\*\\*",
+          "end": "\\*\\*\\)",
+          "beginCaptures": {
+            "0": {"name": "punctuation.definition.comment.begin.eng"}
+          },
+          "endCaptures": {
+            "0": {"name": "punctuation.definition.comment.end.eng"}
+          }
+        },
+        {
+          "name": "comment.block.eng",
+          "begin": "(?i)\\bcomment\\s*\\(",
+          "end": "\\)",
+          "beginCaptures": {
+            "0": {"name": "punctuation.definition.comment.begin.eng"}
+          },
+          "endCaptures": {
+            "0": {"name": "punctuation.definition.comment.end.eng"}
+          }
+        },
+        {
+          "name": "comment.line.skip.eng",
+          "match": "(?i)\\bskip\\b.*$",
+          "captures": {
+            "0": {"name": "punctuation.definition.comment.eng"}
+          }
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "name": "entity.name.section.eng",
+          "match": "(?i)\\b(Engine|Wagon|CabView|Sound|Lights|Effects|Controls|Physics|Performance|Brakes|TractionCutOffRelay|Pantographs|PowerSupply|CircuitBreaker|EmergencyBrakes|TrainBrakeController|EngineBrakeController|DynamicBrake|GearBox|Diesel|Electric|Steam|Tender|HeadOut|CabView3D|FreightAnim|Headlight|Pantograph|Tr_CabViewFile|CabViewControls|Digital|MultiStateDisplay|CabSignalDisplay|TwoState|TriState|Lever|Dial|DigitalClock|ScalabiltyGroup|Activation|Deactivation|Stream|Streams|Tr_SMS|Group|Trigger|Volume|SoundLoop)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.eng",
+          "match": "(?i)\\b(include|if|elseif|else|endif|or|and|not)\\b"
+        },
+        {
+          "name": "keyword.other.eng",
+          "match": "(?i)\\b(Type|Name|Description|MaxPower|MaxForce|MaxVelocity|Mass|Length|Width|Height|CentreOfGravity|InertiaTensor|Coupling|BrakePipeVolume|MainResPipeVolume|BrakeCylinderPressureForMaxBrakeBrakeForce|MaxBrakeForce|MaxHandbrakeForce|NumberOfHandbrakeLeverSteps|MaxReleaseRate|MaxApplicationRate|MaxAuxilaryChargingRate|BrakePipeChargingRate|BrakePipeTimeFactor|BrakeCylinderSpringRelaxTimeFactor|BrakePipeMinPressure|MaxLineVoltage|MaxOutputPower|PowerOnDelay|AuxPowerOnDelay|BatteryVoltage|VoltageMode|LineFrequency|MaxCurrent|MaxSpeed|StartingResistance|AccelerationIncrement|AccelerationSustain|AccelerationCurve|Axles|WheelRadius|MonomotorUnit|GearBoxNumberOfGears|GearBoxDirectDriveGear|GearBoxMaxSpeedForGears|GearBoxMaxTractiveForceForGears|GearBoxResistance|GearBoxSpeedRange|GearBoxTractiveForceAtSpeed|IdleRPM|MaxRPM|StartingRPM|MaxRatedPower|IdleFuelFlowRate|DesignGearBox|CabHeadPos|CabHeadDir|HeadPos|HeadDir|RotationLimit|StartDirection|Sound|Name3D|Position|Target|Direction|Radius|Angle|Matrix|Animation|Frame|Frames|LinearPos|EaseInEase|EaseIn|EaseOut|Linear|Distance|TwoState|TriState|Discrete|ControlStyle|Orientation|DirIncrease|ScaleRange|ValueRange|MouseControl|OnCommand|OffCommand|Sound3D|Stream|Volume|CurvePoint|CurveSpeed|SpeedIncrease|SpeedDecrease|SpeedMax|DistanceVariation|VolumeVariation|ORTSDieselEngines|DieselPowerTab|DieselConsumptionTab|ThrottleRPMTab|DieselTorqueTab|ORTSBrakeShoeFriction|EngineControllers|Throttle|NumNotches|Brake_Engine|Brake_Train|EngineOperatingProcedures|CabViewType|CabViewFile|CabViewWindow|CabViewWindowFile|EngineData|Position|Direction|Graphic|Style|NumFrames|NumPositions|NumValues|ScaleRange|ScalePos|Units|Pivot|DirIncrease|Accuracy|AccuracySwitch|LeadingZeros|Justification|PositiveColour|NegativeColour|DecreaseColour|ControlColour|SwitchVal|States|MouseControl|ORTSfont|SPEEDOMETER|DIGITAL|DIAL|NEEDLE|POINTER|MULTI_STATE_DISPLAY|CAB_SIGNAL_DISPLAY|ASPECT_DISPLAY|TWO_STATE|TRI_STATE|LEVER|DIGITAL_CLOCK|THROTTLE|DYNAMIC_BRAKE|TRAIN_BRAKE|ENGINE_BRAKE|DIRECTION|PANTOGRAPHS_4C|EMERGENCY_BRAKE|AMMETER|BRAKE_CYL|BRAKE_PIPE|MAIN_RES|LINE_VOLTAGE|AMMETER_ABS|FRONT_HLIGHT|WHEELSLIP|OVERSPEED|ALERTER_DISPLAY|DIRECTION_DISPLAY|PENALTY_APP|WIPERS|BELL|RESET|SANDERS|CLOCK|KM_PER_HOUR|BAR|AMPS|KILOVOLTS|ONOFF|WHILE_PRESSED|PRESSED|NOT_SPRUNG|SPRUNG|NONE|24HOUR|ScalabiltyGroup|Activation|Deactivation|Streams|Group|Trigger|SoundLoop|SelectionMethod|Clips|File|Priority|SpeedControlled|CurvePoints|FrequencyCurve|VolumeCurve|RandomDelay|InitialDelay|Variable|External|Internal|Distance3D|Doppler3D|Loop|OneShot|RandomSelection|SequentialSelection|VolumeVariation|PitchVariation|StartLoop|ReleaseLoop)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.eng",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.eng",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.eng",
+          "match": "\\b-?[0-9]*\\.[0-9]+([eE][+-]?[0-9]+)?\\b"
+        },
+        {
+          "name": "constant.numeric.integer.eng",
+          "match": "\\b-?[0-9]+\\b"
+        }
+      ]
+    },
+    "parameters": {
+      "patterns": [
+        {
+          "name": "variable.parameter.eng",
+          "match": "\\b[A-Za-z][A-Za-z0-9_]*\\s*\\("
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.eng",
+          "match": "[+\\-*/=<>]"
+        }
+      ]
+    }
+  }
+}

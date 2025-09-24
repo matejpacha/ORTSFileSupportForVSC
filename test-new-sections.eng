@@ -1,0 +1,86 @@
+Engine (
+	Type ( Diesel )
+	Name ( "Sample Diesel Engine" )
+	
+	ORTSDieselEngines (
+		DieselEngine (
+			IdleRPM ( 600 )
+			MaxRPM ( 1800 )
+			
+			DieselPowerTab (
+				DieselPowerTabEntry ( 600 200kW )
+				DieselPowerTabEntry ( 1200 800kW )
+				DieselPowerTabEntry ( 1800 1200kW )
+			)
+			
+			DieselConsumptionTab (
+				DieselConsumptionTabEntry ( 600 50L/h )
+				DieselConsumptionTabEntry ( 1200 120L/h )
+				DieselConsumptionTabEntry ( 1800 180L/h )
+			)
+			
+			ThrottleRPMTab (
+				ThrottleRPMTabEntry ( 0 600 )
+				ThrottleRPMTabEntry ( 50 1200 )
+				ThrottleRPMTabEntry ( 100 1800 )
+			)
+			
+			DieselTorqueTab (
+				DieselTorqueTabEntry ( 600 5000N.m )
+				DieselTorqueTabEntry ( 1200 6500N.m )
+				DieselTorqueTabEntry ( 1800 6000N.m )
+			)
+		)
+	)
+	
+	ORTSBrakeShoeFriction (
+		BrakeShoeFrictionEntry ( 0.0 0.35 )
+		BrakeShoeFrictionEntry ( 10.0 0.32 )
+		BrakeShoeFrictionEntry ( 50.0 0.28 )
+	)
+	
+	Coupling (
+		Type ( Automatic )
+		Spring (
+			Stiffness ( 1e6N/m 2e6N/m )
+			Damping ( 1e6N/m/s 1e6N/m/s )
+		)
+	)
+	
+	EngineControllers (
+		Throttle (
+			NumNotches ( 8 )
+			Notches (
+				Notch ( 0.0 0 0 )
+				Notch ( 0.125 1 0 )
+				Notch ( 0.25 2 0 )
+			)
+		)
+		
+		Brake_Engine (
+			NumNotches ( 7 )
+			Notches (
+				Notch ( 0.0 0 0 )
+				Notch ( 0.167 1 0 )
+			)
+		)
+		
+		Brake_Train (
+			NumNotches ( 8 )
+			Notches (
+				Notch ( 0.0 0 0 )
+				Notch ( 0.125 1 0 )
+			)
+		)
+	)
+	
+	Description (
+		"This is a sample diesel locomotive with advanced ORTS features"
+		"Multiple lines of description are supported"
+	)
+	
+	EngineOperatingProcedures (
+		Procedure ( "Startup" "Turn on battery, start engine, release brakes" )
+		Procedure ( "Shutdown" "Apply brakes, shut down engine, turn off battery" )
+	)
+)

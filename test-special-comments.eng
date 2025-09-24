@@ -1,0 +1,25 @@
+comment(
+This is a regular comment block
+with multiple lines
+)
+
+comment (** brzdici vaha rucni brzdy 7t + 7t. (2*7t)*1.5=21kN **)
+
+Engine (
+	Type ( Diesel )
+	Name ( "Test Engine" )
+	
+	comment( Regular comment inside section )
+	
+	comment (** Special comment with (brackets) and calculations: P = F * v **)
+	
+	MaxPower ( 1000kW )
+	
+	comment(**
+	Multi-line special comment
+	with brackets () and calculations
+	Force = Mass * Acceleration (F = m * a)
+	**)
+	
+	Mass ( 120t )
+)

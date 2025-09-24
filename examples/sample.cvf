@@ -1,0 +1,81 @@
+SIMISA@@@@@@@@@@JINX0h0t______
+
+Tr_CabViewFile (
+	CabViewType ( 1 )
+	CabViewFile ( "../common.cab/cab162/162_front.ace" )
+	CabViewWindow ( 0 0 640 290 )
+	CabViewWindowFile ( "../common.cab/cab162/363_front.ace" )
+	Position ( 0.6 3 6.75 )
+	Direction ( 10 1 0 )
+	
+	EngineData ( ZSSK163 )
+	CabViewControls ( 5
+		Digital (
+			Type ( SPEEDOMETER DIGITAL )
+			ORTSfont ( 4 0 "Arial" )
+			Position ( 282 261 32 32 )
+			ScaleRange ( 0 160 )
+			Accuracy ( 0 )
+			AccuracySwitch ( 0 )
+			LeadingZeros ( 0 )
+			Justification ( 3 )
+			PositiveColour ( 1
+				ControlColour ( 0 179 89 )
+			)
+			NegativeColour ( 0 )
+			DecreaseColour ( 0 )
+			Units ( KM_PER_HOUR )
+		)
+		
+		MultiStateDisplay (
+			Type ( OVERSPEED MULTI_STATE_DISPLAY )
+			Position ( 298 271 32 10 )
+			Graphic ( "../common.cab/cab162/363_rychlost.ace" )
+			States ( 2 2 1
+				State (
+					Style ( 0 )
+					SwitchVal ( 0 )
+				)
+				State (
+					Style ( 1 )
+					SwitchVal ( 1 )
+				)
+			)
+		)
+		
+		Lever (
+			Type ( THROTTLE LEVER )
+			Position ( 447 353 42 30 )
+			Graphic ( "../common.cab/cab162/363_jazda.ace" )
+			Style ( SPRUNG )
+			MouseControl ( 1 )
+			NumFrames ( 2 2 1 )
+			NumPositions ( 2 0 1 )
+			NumValues ( 2 0 0.001 )
+			Orientation ( 0 )
+			DirIncrease ( 0 )
+			ScaleRange ( 0 1 )
+		)
+		
+		Dial (
+			Type ( SPEEDOMETER DIAL )
+			Position ( 307 240 1 16 )
+			Graphic ( "../common.cab/cab162/363_rychlomer.ace" )
+			Style ( NEEDLE )
+			ScaleRange ( 0 190 )
+			ScalePos ( 223 496 )
+			Units ( KM_PER_HOUR )
+			Pivot ( 17 )
+			DirIncrease ( 0 )
+		)
+		
+		TwoState (
+			Type ( WIPERS TWO_STATE )
+			Position ( 282 230 50 50 )
+			Graphic ( "../common.cab/cab162/363_mirel_bez_prenosu.ace" )
+			NumFrames ( 2 2 1 )
+			Style ( ONOFF )
+			MouseControl ( 0 )
+		)
+	)
+)

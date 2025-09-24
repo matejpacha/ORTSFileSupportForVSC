@@ -1,0 +1,12 @@
+node_modules/
+*.vsix
+.vscode-test/
+*.log
+src/
+tsconfig.json
+
+# Development files to exclude from package
+test-*.eng
+icon-instructions.md
+publishing-commands.txt
+SHARING.md

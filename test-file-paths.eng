@@ -1,0 +1,43 @@
+comment(
+Test file demonstrating file path linking with Ctrl+Click
+This file contains various file path formats used in Train Simulator
+)
+
+Engine (
+	Type ( Diesel )
+	Name ( "Path Test Engine" )
+	
+	comment( Sound files - these should be clickable )
+	Sound ( "..\\..\\common.sound\\diesel\\engine.sms" )
+	Sound ( "sounds/horn.wav" )
+	
+	comment( 3D model files )
+	Name3D ( "models\\locomotive.s" )
+	CabViewFile ( "cab\\engineer.cvf" )
+	
+	comment( Include files )
+	include ( "common\\diesel_base.inc" )
+	include ( "engines/emd_gp40.eng" )
+	
+	comment( Shape files for various components )
+	WagonShape ( "models\\gp40_body.s" )
+	HeadlightShape ( "lights\\headlight.s" )
+	
+	comment( Texture files )
+	Texture ( "textures\\gp40_skin.ace" )
+	NormalMap ( "textures\\gp40_normal.dds" )
+	
+	comment( Mixed path separators )
+	FreightShape ( "freight/containers/20ft_container.s" )
+	CabView3D ( "cab\\interior\\gp40_cab.s" )
+)
+
+comment (** Test various file extensions that should be linkable **)
+Wagon (
+	WagonShape ( "wagons\\boxcar.s" )
+	Sound ( "sounds\\boxcar_rolling.sms" )
+	FreightAnim (
+		FreightShape ( "loads\\grain.s" )
+		EmptyShape ( "wagons\\boxcar_empty.s" )
+	)
+)

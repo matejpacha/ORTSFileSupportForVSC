@@ -1,0 +1,168 @@
+SIMISA@@@@@@@@@@JINX0s1t______
+
+comment( Sample Sound Definition File for MSTS/OpenRails )
+
+Tr_SMS (
+	comment( Main sound management system for locomotive )
+	
+	ScalabiltyGroup ( 0
+		comment( Engine sounds - priority group )
+		Activation (
+			comment( Activate based on engine state )
+			SpeedControlled ( 0
+				comment( Not speed controlled )
+			)
+			Variable ( 2
+				comment( Variable controlled sounds )
+				CurvePoints ( 4
+					comment( Control curve definition )
+					0.0 0.0
+					0.1 0.2
+					0.8 0.9
+					1.0 1.0
+				)
+				comment( Sound file references )
+				File ( "742idle.wav" 1 )
+				File ( "742power1.wav" 1 )
+				File ( "742power2.wav" 1 )
+				File ( "742power3.wav" 1 )
+			)
+			Volume ( 0.8 )
+			Priority ( 6 )
+		)
+		
+		Deactivation (
+			comment( Deactivation parameters )
+			Variable ( 2
+				CurvePoints ( 2
+					0.0 0.0
+					1.0 1.0
+				)
+			)
+		)
+		
+		Streams ( 1
+			comment( Audio stream configuration )
+			Stream (
+				comment( Primary engine sound stream )
+				Priority ( 6 )
+				Volume ( 0.9 )
+				Triggers ( 4
+					comment( Individual sound triggers )
+					
+					Trigger (
+						comment( Idle sound trigger )
+						Variable ( Speed_Inc_Past 0.1 )
+						SoundLoop (
+							File ( "sounds/742idle_loop.wav" -1 )
+							SelectionMethod ( RandomSelection )
+						)
+						FrequencyCurve(
+							SpeedControlled
+							CurvePoints ( 3
+								0.0 0.8
+								0.5 1.0  
+								1.0 1.2
+							)
+						)
+						VolumeCurve(
+							SpeedControlled  
+							CurvePoints ( 4
+								0.0 0.7
+								0.2 0.9
+								0.8 0.6
+								1.0 0.3
+							)
+						)
+					)
+					
+					Trigger (
+						comment( Power notch 1 )
+						Variable ( ThrottleState_Inc_Past 0.1 )
+						SoundLoop (
+							File ( "sounds/742power1_loop.wav" -1 )
+						)
+						Volume ( 0.85 )
+						Priority ( 5 )
+					)
+					
+					Trigger (
+						comment( Horn activation sound )
+						Variable ( HornState_Inc_Past 0.5 )
+						PlayOneShot ( 1
+							File ( "sounds/742horn.wav" 1 )
+							SelectionMethod ( SequentialSelection )
+						)
+						Volume ( 1.0 )
+						Priority ( 7 )
+					)
+					
+					Trigger (
+						comment( Brake application sound )
+						Variable ( TrainBrakeState_Inc_Past 0.3 )
+						Discrete (
+							Streams ( 2
+								File ( "sounds/brake_app1.wav" 1 )
+								File ( "sounds/brake_app2.wav" 1 )
+							)
+							SelectionMethod ( RandomSelection )
+						)
+						Volume ( 0.7 )
+						Priority ( 4 )
+						InitialDelay ( 0.2 )
+						RandomDelay ( 0.1 0.3 )
+					)
+				)
+			)
+		)
+	)
+	
+	ScalabiltyGroup ( 1
+		comment( Environmental sounds - lower priority )
+		Activation (
+			External ( 1 )
+			Distance3D ( 0.0 0.0 0.0 )
+		)
+		
+		Streams ( 1
+			Stream (
+				Volume ( 0.6 )
+				Priority ( 3 )
+				
+				Triggers ( 2
+					Trigger (
+						comment( Wheel rolling sounds )
+						Variable ( Speed_Inc_Past 0.05 )
+						SoundLoop (
+							File ( "sounds/wheel_roll.wav" -1 )
+						)
+						FrequencyCurve(
+							SpeedControlled
+							CurvePoints ( 2
+								0.0 0.7
+								1.0 1.4
+							)
+						)
+						VolumeCurve(
+							SpeedControlled
+							CurvePoints ( 3
+								0.0 0.0
+								0.1 0.4
+								1.0 0.8
+							)
+						)
+					)
+					
+					Trigger (
+						comment( Door closing sound )
+						Variable ( DoorsState_Dec_Past 0.5 )
+						PlayOneShot ( 1
+							File ( "sounds/door_close.wav" 1 )
+						)
+						Volume ( 0.8 )
+					)
+				)
+			)
+		)
+	)
+)

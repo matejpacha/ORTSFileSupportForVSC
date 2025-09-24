@@ -1,0 +1,86 @@
+{
+  "name": "eng-language-support",
+  "displayName": "ENG Language Support",
+  "description": "Language support for ENG, INC, WAG, CVF, and SMS (Microsoft Train Simulator / OpenRails) files with syntax highlighting and language configuration",
+  "version": "1.5.1",
+  "publisher": "your-publisher-name",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/eng-language-support.git"
+  },
+  "homepage": "https://github.com/your-username/eng-language-support#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/eng-language-support/issues"
+  },
+  "keywords": [
+    "eng",
+    "inc",
+    "wag",
+    "cvf",
+    "sms",
+    "train simulator",
+    "openrails",
+    "msts",
+    "locomotive",
+    "wagon",
+    "cabview",
+    "sound",
+    "include files",
+    "syntax highlighting",
+    "language support"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "eng",
+        "aliases": [
+          "ENG",
+          "eng",
+          "inc",
+          "wag",
+          "cvf",
+          "sms",
+          "Train Simulator",
+          "OpenRails",
+          "Cabview",
+          "Sound"
+        ],
+        "extensions": [
+          ".eng",
+          ".inc",
+          ".wag",
+          ".cvf",
+          ".sms"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "eng",
+        "scopeName": "source.eng",
+        "path": "./syntaxes/eng.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}

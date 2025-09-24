@@ -1,0 +1,18 @@
+# Publishing Commands
+
+## Login to publisher account
+vsce login your-publisher-name
+
+## Publish to marketplace
+vsce publish
+
+## Or publish with specific version
+vsce publish 1.0.0
+
+## Or publish pre-release
+vsce publish --pre-release
+
+## Update version and publish
+vsce publish patch  # 1.0.0 -> 1.0.1
+vsce publish minor  # 1.0.0 -> 1.1.0  
+vsce publish major  # 1.0.0 -> 2.0.0
