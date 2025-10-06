@@ -1,0 +1,12 @@
+feat: Release v1.5.4 - Enhanced SMS and CVF file folding support
+
+- Fixed SMS file folding issues for sound management structures  
+- Fixed CVF file folding issues for cabview control definitions
+- Enhanced language configuration with improved regex patterns
+- All Train Simulator file formats now have comprehensive folding support
+- Updated documentation to v1.5.4 (package size: 2.52 MB, 43 files)
+
+SMS structures now foldable: Tr_SMS, ScalabiltyGroup, Trigger, SoundLoop, FrequencyCurve
+CVF structures now foldable: Tr_CabViewFile, Digital, Lever, Dial, States, PositiveColour
+
+Resolves user-reported folding issues for professional Train Simulator development workflow.

@@ -2,6 +2,30 @@
 
 All notable changes to the ENG Language Support extension will be documented in this file.
 
+## [1.5.4] - 2025-10-06
+
+### Fixed - SMS & CVF FOLDING SUPPORT
+- **Enhanced SMS File Folding** - Fixed folding issues for SMS (Sound Management System) files
+  - All SMS structures now properly foldable: `Tr_SMS`, `ScalabiltyGroup`, `Activation`, `Deactivation`
+  - Sound triggers and controls: `Stream`, `Streams`, `Trigger`, `Triggers`, `SoundLoop`
+  - Curve definitions: `FrequencyCurve`, `VolumeCurve`, `CurvePoints`, `Variable`
+  - Advanced audio: `PlayOneShot`, `SelectionMethod`, `SpeedControlled`
+
+- **Enhanced CVF File Folding** - Fixed folding issues for CVF (Cabview) files
+  - Main structures: `Tr_CabViewFile`, `CabViewControls`, `EngineData`
+  - Control types: `Digital`, `MultiStateDisplay`, `Lever`, `Dial`, `TwoState`, `TriState`
+  - Color configurations: `PositiveColour`, `NegativeColour`, `ControlColour`
+  - State management: `States`, `State` definitions
+
+- **Improved Language Configuration** - Refined folding regex patterns for better structure recognition
+- **Comprehensive Testing** - Verified folding works across all Train Simulator file formats
+
+### Technical Details
+- Enhanced folding markers for complex nested structures
+- Improved regex patterns for Train Simulator syntax recognition
+- Better handling of multi-line control definitions
+- Optimized language configuration for professional development workflow
+
 ## [1.5.3] - 2025-10-06
 
 ### Added - MASSIVE KEYWORD EXPANSION

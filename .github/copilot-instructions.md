@@ -15,4 +15,4 @@ ENG file language extension for Microsoft Train Simulator / OpenRails using Type
 - [x] **Documentation Complete** - All project documentation finalized
 
 ## Current Status
-**Version 1.5.3** - Complete Train Simulator file format support with comprehensive keyword coverage for ENG, INC, WAG, CVF, and SMS files.
+**Version 1.5.4** - Complete Train Simulator file format support with comprehensive keyword coverage and enhanced folding support for all file types (ENG, INC, WAG, CVF, SMS).

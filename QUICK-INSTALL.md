@@ -1,9 +1,9 @@
-# Quick Installation Guide - ENG Language Support v1.5.3
+# Quick Installation Guide - ENG Language Support v1.5.4
 
 ## 🚀 Quick Install
 
 ### Method 1: Direct Installation (Recommended)
-1. Download `eng-language-support-1.5.3.vsix` (~360 KB)
+1. Download `eng-language-support-1.5.4.vsix` (~2.52 MB)
 2. Open VS Code
 3. Press `Ctrl+Shift+P` to open Command Palette
 4. Type "Install from VSIX" and select it
@@ -16,7 +16,7 @@
 2. Go to Extensions (`Ctrl+Shift+X`)
 3. Click the "..." menu (top-right of Extensions panel)
 4. Select "Install from VSIX..."
-5. Browse and select `eng-language-support-1.5.3.vsix`
+5. Browse and select `eng-language-support-1.5.4.vsix`
 6. Restart VS Code
 
 ## ✨ Features You'll Get

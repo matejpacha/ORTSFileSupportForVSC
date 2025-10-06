@@ -1,18 +1,18 @@
 # MSTS/OpenRails ENG/WAG script Language Support
 
-**Version 1.5.3** - A Visual Studio Code extension that provides comprehensive language support for ENG, INC, WAG, CVF, and SMS files used in Microsoft Train Simulator and OpenRails.
+**Version 1.5.4** - A Visual Studio Code extension that provides comprehensive language support for ENG, INC, WAG, CVF, and SMS files used in Microsoft Train Simulator and OpenRails.
 
 ## 📦 Installation
 
 ### Download and Install
-1. Download `eng-language-support-1.5.3.vsix` (360.82 KB)
+1. Download `eng-language-support-1.5.4.vsix` (2.52 MB)
 2. In VS Code: `Ctrl+Shift+P` → "Install from VSIX"
 3. Select the downloaded file
 4. Restart VS Code
 
 ### Command Line
 ```bash
-code --install-extension eng-language-support-1.5.3.vsix
+code --install-extension eng-language-support-1.5.4.vsix
 ```
 
 ## Features
@@ -144,6 +144,7 @@ npm run watch
 
 ## 📈 Version History
 
+- **v1.5.4** (2025-10-06) - Enhanced SMS and CVF file folding support, improved language configuration
 - **v1.5.3** (2025-10-06) - Comprehensive keyword expansion (280+ new keywords from 200,000+ analyzed files)
 - **v1.5.2** (2025-09-24) - Enhanced WAG and CVF support
 - **v1.5.1** - File path navigation and improved syntax highlighting

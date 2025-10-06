@@ -1,6 +1,6 @@
 # Publishing Commands for ENG Language Support Extension
 
-## Current Version: 1.5.3
+## Current Version: 1.5.4
 
 ## Prerequisites
 # Install vsce globally (if not already installed)
@@ -15,7 +15,7 @@ npm run compile
 vsce package
 
 ### Test Package Locally
-code --install-extension eng-language-support-1.5.3.vsix
+code --install-extension eng-language-support-1.5.4.vsix
 
 ## 2. Publishing to VS Code Marketplace
 
@@ -26,7 +26,7 @@ vsce login your-publisher-name
 vsce publish
 
 ### Publish with specific version
-vsce publish 1.5.4
+vsce publish 1.5.5
 
 ### Publish pre-release version
 vsce publish --pre-release
@@ -34,9 +34,9 @@ vsce publish --pre-release
 ## 3. Version Management
 
 ### Update version and publish automatically
-vsce publish patch  # 1.5.3 -> 1.5.4
-vsce publish minor  # 1.5.3 -> 1.6.0  
-vsce publish major  # 1.5.3 -> 2.0.0
+vsce publish patch  # 1.5.4 -> 1.5.5
+vsce publish minor  # 1.5.4 -> 1.6.0  
+vsce publish major  # 1.5.4 -> 2.0.0
 
 ### Manual version update (in package.json)
 # Edit package.json version field, then:
@@ -48,7 +48,7 @@ vsce publish
 vsce package
 
 ### Install from package file
-code --install-extension eng-language-support-1.5.3.vsix
+code --install-extension eng-language-support-1.5.4.vsix
 
 ## 5. Verification Commands
 
@@ -69,11 +69,11 @@ vsce ls
 # - Verify documentation is up-to-date
 # - Check that version numbers match across all files
 
-## 7. Current Package Information (v1.5.3)
-# Package: eng-language-support-1.5.3.vsix  
-# Size: 360.82 KB
-# Files: 30 files including examples, documentation, and compiled code
+## 7. Current Package Information (v1.5.4)
+# Package: eng-language-support-1.5.4.vsix  
+# Size: 2.52 MB
+# Files: 43 files including examples, documentation, and compiled code
 # Supported Extensions: .eng, .inc, .wag, .cvf, .sms
 # Keywords: 280+ keywords from 200,000+ analyzed Train Simulator files
 # Coverage: ~95% of all Train Simulator file formats (ENG, INC, WAG, CVF, SMS)
-# Features: Comprehensive ORTS support, advanced folding, file navigation
+# Features: Comprehensive ORTS support, enhanced folding (SMS/CVF fixed), file navigation

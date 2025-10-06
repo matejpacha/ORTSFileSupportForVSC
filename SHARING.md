@@ -3,14 +3,14 @@
 ## 📤 Direct File Sharing
 
 ### Cloud Storage
-- **OneDrive**: Upload `eng-language-support-1.5.3.vsix` and share link
+- **OneDrive**: Upload `eng-language-support-1.5.4.vsix` and share link
 - **Google Drive**: Share the .vsix file with view/download permissions
 - **Dropbox**: Upload and create shareable link
 - **Teams/Slack**: Direct file attachment
 
 ### Network Sharing
 - **Company Network**: Place on shared drive
-- **Email**: Attach the .vsix file (only 360.82 KB)
+- **Email**: Attach the .vsix file (2.52 MB)
 - **USB Drive**: Copy for offline sharing
 
 ## 🌐 Online Repository Sharing

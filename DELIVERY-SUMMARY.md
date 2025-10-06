@@ -1,9 +1,9 @@
 # 🎯 ENG Language Support - Ready for Sharing!
 
 ## 📦 Package Details
-- **Version**: 1.5.3
-- **File**: `eng-language-support-1.5.3.vsix`
-- **Size**: 360.82 KB
+- **Version**: 1.5.4
+- **File**: `eng-language-support-1.5.4.vsix`
+- **Size**: 2.52 MB
 - **Release Date**: October 6, 2025
 
 ## ✅ Complete File Support
@@ -17,7 +17,10 @@
 
 ## 🚀 Key Features Implemented
 - ✅ **Advanced Syntax Highlighting** - All Train Simulator keywords
-- ✅ **Smart Code Folding** - Sections, comments, controls
+- ✅ **Enhanced Code Folding** - All file types with comprehensive structure support
+  - **SMS Files**: `Tr_SMS`, `ScalabiltyGroup`, `Trigger`, `SoundLoop`, `FrequencyCurve`
+  - **CVF Files**: `Tr_CabViewFile`, `Digital`, `Lever`, `Dial`, `States`, `PositiveColour`
+  - **ENG/WAG Files**: `Engine`, `Wagon`, all control sections and parameters
 - ✅ **File Path Navigation** - Ctrl+Click to open referenced files
 - ✅ **Intelligent Comments** - `comment()`, `comment(**)`, and `skip` support
 - ✅ **CVF Controls** - Digital, Dial, Lever, TwoState, TriState, etc.
@@ -27,7 +30,7 @@
 ## 📁 Files Ready for Distribution
 
 ### Main Package
-- `eng-language-support-1.5.3.vsix` - **Main extension file**
+- `eng-language-support-1.5.4.vsix` - **Main extension file**
 
 ### Documentation
 - `QUICK-INSTALL.md` - Fast installation guide
