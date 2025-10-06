@@ -2,7 +2,7 @@
 
 ## Method 1: Install from VSIX file
 
-1. **Download** the `eng-language-support-1.5.1.vsix` file
+1. **Download** the `eng-language-support-1.5.3.vsix` file
 2. **Open VS Code**
 3. **Go to Extensions** (Ctrl+Shift+X)
 4. **Click the `...` menu** → "Install from VSIX..."
@@ -12,7 +12,7 @@
 ## Method 2: Command Line Installation
 
 ```bash
-code --install-extension eng-language-support-1.5.1.vsix
+code --install-extension eng-language-support-1.5.3.vsix
 ```
 
 ## Method 3: Manual Installation

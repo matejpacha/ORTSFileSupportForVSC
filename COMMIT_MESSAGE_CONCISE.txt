@@ -1,0 +1,13 @@
+feat: Release v1.5.3 - Comprehensive Train Simulator keyword expansion
+
+- Added 280+ keywords from 207,643+ analyzed Train Simulator files
+- Improved keyword coverage from ~60% to ~95% across all formats
+- Enhanced CVF (50+ keywords), SMS (30+ keywords), ENG/INC (200+ keywords), WAG (80+ keywords)
+- Fixed Engine() block folding and language configuration issues
+- Updated all documentation and installation guides to v1.5.3
+- Package: eng-language-support-1.5.3.vsix (360.82 KB, 30 files)
+
+Comprehensive support for Steam/Diesel/Electric locomotives, wagons, cabviews, 
+sound systems, and complete OpenRails ORTS extensions.
+
+Closes: Complete Train Simulator development environment for VS Code

@@ -2,7 +2,7 @@
   "name": "eng-language-support",
   "displayName": "MSTS/OpenRails ENG/WAG script Language Support",
   "description": "Language support for ENG, INC, WAG, CVF, and SMS (Microsoft Train Simulator / OpenRails) files with syntax highlighting and language configuration",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "publisher": "MatejPacha",
   "author": "Matej Pacha",
   "license": "MIT",

@@ -1,4 +1,4 @@
-{
+﻿{
   "comments": {
     "blockComment": ["comment(", ")"]
   },
@@ -21,9 +21,9 @@
   ],
   "folding": {
     "markers": {
-      "start": "^\\s*(?i)(comment|Comment|Engine|Wagon|CabView|Sound|Lights|Effects|Controls|Physics|Performance|Brakes|TractionCutOffRelay|Pantographs|PowerSupply|CircuitBreaker|EmergencyBrakes|TrainBrakeController|EngineBrakeController|DynamicBrake|GearBox|Diesel|Electric|Steam|Tender|HeadOut|CabView3D|FreightAnim|Headlight|Pantograph|Coupling|Spring|BrakePipeVolume|Animation|FreightShape|ORTSDieselEngines|DieselPowerTab|DieselConsumptionTab|ThrottleRPMTab|DieselTorqueTab|ORTSBrakeShoeFriction|EngineControllers|Throttle|NumNotches|Brake_Engine|Brake_Train|Description|EngineOperatingProcedures)\\s*\\(",
+      "start": "^\\s*(?i)([A-Za-z_][A-Za-z0-9_]*|comment)\\s*\\(",
       "end": "^\\s*\\)\\s*$"
     }
   },
-  "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)"
+  "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)"
 }
